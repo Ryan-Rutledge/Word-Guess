@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Word Guess</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="script.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<h1>Word Guess</h1>
+		</header>
+		
+		<main>
+			<div id="word"></div>
+			<div id="hint"></div>
+			<div id="guess_status">Misses: <span id="misses"></span> / <span id="max_misses"></span></div>
+			<div id="guess_selector">
+				<button class="guess" value="A">A</button>
+				<button class="guess" value="B">B</button>
+				<button class="guess" value="C">C</button>
+				<button class="guess" value="D">D</button>
+				<button class="guess" value="E">E</button>
+				<button class="guess" value="F">F</button>
+				<button class="guess" value="G">G</button>
+				<button class="guess" value="H">H</button>
+				<button class="guess" value="I">I</button>
+				<button class="guess" value="J">J</button>
+				<button class="guess" value="K">K</button>
+				<button class="guess" value="L">L</button>
+				<button class="guess" value="M">M</button>
+				<button class="guess" value="N">N</button>
+				<button class="guess" value="O">O</button>
+				<button class="guess" value="P">P</button>
+				<button class="guess" value="Q">Q</button>
+				<button class="guess" value="R">R</button>
+				<button class="guess" value="S">S</button>
+				<button class="guess" value="T">T</button>
+				<button class="guess" value="U">U</button>
+				<button class="guess" value="V">V</button>
+				<button class="guess" value="W">W</button>
+				<button class="guess" value="X">X</button>
+				<button class="guess" value="Y">Y</button>
+				<button class="guess" value="Z">Z</button>
+				<button class="guess" value="-">-</button>
+			</div>
+			<button id="reset">Play Again</button>
+		</main>
+		
+		<script>createGame();</script>
+	</body>
+</html>
