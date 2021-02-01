@@ -66,7 +66,6 @@ class WordGuessGame {
 				$('<span>').addClass('letter').text(' ')
 			);
 		});
-
 	}
 	
 	// Retrieve word from external API
@@ -78,10 +77,10 @@ class WordGuessGame {
 	
 	// End the game
 	end(status) {
-		$('body').attr('data-status', status);
+		$('body').attr('data-status', status);  // Body uses status for css styling
 		$('.guess').prop('disabled', true);  // Stop user from making more guesses
 		
-		// Reveal the full word
+		// Reveal all letters of word
 		for (var i = 0; i < this.word.length; i++) {
 			$('#word .letter').eq(i).text(this.word[i]);
 		}
@@ -92,7 +91,7 @@ class WordGuessGame {
 function createGame() {
 	var wordGuessGame = new WordGuessGame();
 	$('.guess').click(e => {
-		$(e.target).prop('disabled', true);  // Allow each letter to be guessed once
+		$(e.target).prop('disabled', true);  // Allow each letter to be guessed only once
 		wordGuessGame.guess($(e.target).val())  // Guess value of clicked button
 	});
 	$('#reset').click(_ => wordGuessGame.start());
